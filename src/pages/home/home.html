@@ -1,0 +1,117 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Calculator
+    </ion-title>
+  </ion-navbar>
+
+</ion-header>
+<style>
+  div.row{
+    width:100%;
+    padding: 0;
+    margin:0;
+  }
+  .col {
+    border: solid 1px transparent;
+    border-bottom-style: none;
+    border-right-style: none;
+    margin: 0;
+    width:auto;
+    border-radius: 5px;
+}
+button{
+  width:100%;
+  border:1px solid transparent;
+  box-shadow: none;
+  margin-top: -20px;
+  margin-right: -25px;
+  height:75px;
+}
+ion-content {
+  /*background-color:color($colors,dark);*/
+  background-color: #4b3e70;
+  background-color: #444444;
+}
+</style>
+<ion-content padding class="has-header fixed-content" no-bounce>
+  <div ng-app="myApp" ng-controller="NavController" ng-init="answer='0';">
+  <input id="answer" type="text" value="{{answer}}" disabled="disabled">
+  <br><br>
+  <div id="container">
+  <div id="pad">
+    <div block="true" class = "row">
+      <div class="col">
+       <button ion-button color="dark" on-click="addToExp('7')" large>7</button>
+      </div>
+      <div class="col">
+       <button ion-button color="dark" on-click="addToExp('8')" large>8</button>
+      </div>
+      <div class="col">
+        <button ion-button color="dark" on-click="addToExp('9')" large>9</button>
+      </div>
+      <div class="col">
+        <button ion-button color="dark2" on-click="addToExp('/')" large>/</button>
+      </div>
+  </div>
+  <div block="true" class = "row">
+      <div class="col">
+       <button ion-button color="dark" on-click="addToExp('4')" large>4</button>
+      </div>
+      <div class="col">
+       <button ion-button color="dark" on-click="addToExp('5')" large>5</button>
+      </div>
+      <div class="col">
+        <button ion-button color="dark" on-click="addToExp('6')" large>6</button>
+       </div>
+      <div class="col">
+        <button ion-button color="dark2" on-click="addToExp('*')" large>x</button>
+       </div>
+  </div>
+  <div block="true" class = "row">
+      <div class="col">
+        <button ion-button color="dark" on-click="addToExp('1')" large>1</button>
+      </div>
+      <div class="col">
+       <button ion-button color="dark" on-click="addToExp('2')" large>2</button>
+      </div>
+      <div class="col">
+        <button ion-button color="dark" on-click="addToExp('3')" large>3</button>
+      </div>
+      <div class="col">
+        <button ion-button color="dark2" on-click="addToExp('+')" large>+</button>
+       </div>
+  </div>
+  <div block="true" class = "row">
+      <div class="col">
+       <button ion-button color="dark" on-click="addToExp('.')" large>.</button>
+     </div>
+     <div class="col">
+       <button ion-button color="dark" on-click="addToExp('0')" large>0</button>
+     </div>
+     <div class="col">
+        <button ion-button color="dark" on-click="removeLast()" large>DEL</button>
+      </div>
+      <div class="col">
+        <button ion-button color="dark2" on-click="addToExp('-')" large>-</button>
+      </div>
+  </div>
+  <div block="true" class="row">
+    <div class="col">
+      <button ion-button color="dark" on-click="clear()" large>C</button>
+    </div>
+    <div class="col">
+      <button ion-button color="dark" on-click="evaluate()" large>=</button>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+<script>
+  var app = angular.module("myApp",[]);
+  app.controller("myController",function($scope){
+    $scope.answer="";
+    $scope.count=0;
+  });
+</script>
+</ion-content>

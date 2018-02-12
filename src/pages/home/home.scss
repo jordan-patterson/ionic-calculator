@@ -1,0 +1,29 @@
+.toolbar-title{
+	text-align:center;
+	color:#25354f;
+	color:#a0a0a0;
+  color:#ffc700;
+}
+#answer{
+  height:90px;
+  background-color: #25354f;
+  border-radius: 5px;
+  padding: 20px;
+  border:1px solid transparent;
+  width:100%;
+  color:#42f1f4;
+  font-size: 25px;
+  font-weight: 400;
+
+}
+p{
+  color:#42f1f4;
+  font-size: 25px;
+  font-weight: 400;
+}
+ion-scroll.scroll-y .scroll-content::-webkit-scrollbar{
+  display: none;
+}
+.scroll-content {
+    overflow-y: hidden !important;
+}

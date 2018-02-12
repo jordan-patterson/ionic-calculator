@@ -1,0 +1,4 @@
+#Mon Feb 12 05:43:08 EST 2018
+base.0=/home/jordan/Desktop/projects/calculator/platforms/android/app/build/intermediates/transforms/dex/release/0
+renamed.0=classes.dex
+file.0=/home/jordan/Desktop/projects/calculator/platforms/android/app/build/intermediates/transforms/dex/release/0/classes.dex
